@@ -1,7 +1,7 @@
 var config = {
     type: Phaser.AUTO,
-    width: 800,
-    height: 600,
+    width: 1200,
+    height: 800,
     physics: {
         default: 'arcade',
         arcade: {
@@ -27,9 +27,9 @@ var game = new Phaser.Game(config);
 let mute = false;
 
 function preload () {
-    this.load.image('sky', 'assets/background.png');
+    this.load.image('sky', 'assets/background-b.png');
     this.load.image('podloga', 'assets/podloga.png');
-    this.load.image('balwanek', 'assets/balwanek.png');
+    this.load.image('balwanek', 'assets/balwanek-tr.png');
     this.load.image('player', 'assets/player-s.png');
 
     this.load.audio('hop', 'assets/hop.mp3');
@@ -39,7 +39,7 @@ function preload () {
 }
 
 function create () {
-    this.add.image(400, 300, 'sky');
+    this.add.image(600, 400, 'sky');
     // this.add.image(80, 157, 'balwanek');
    
     balwanki = this.physics.add.group({
@@ -60,11 +60,12 @@ function create () {
     podlogi.create(400, 300, 'podloga');
     podlogi.create(780, 150, 'podloga');
 
-    podlogi.create(100, 600, 'podloga');
-    podlogi.create(200, 600, 'podloga');
-    podlogi.create(300, 600, 'podloga');
-    podlogi.create(400, 600, 'podloga');
-    podlogi.create(500, 600, 'podloga');
+    podlogi.create(100, 700, 'podloga');
+    podlogi.create(300, 700, 'podloga');
+    podlogi.create(500, 700, 'podloga');
+    podlogi.create(700, 700, 'podloga');
+    podlogi.create(900, 700, 'podloga');
+    podlogi.create(1100, 700, 'podloga');
 
     player = this.physics.add.image(50, 450, 'player');
     player.setScale(0.5);
