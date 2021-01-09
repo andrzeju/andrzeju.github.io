@@ -27,15 +27,7 @@ var game = new Phaser.Game(config);
 let mute = false;
 
 function preload () {
-    this.load.image('sky', 'assets/background-b.png');
-    this.load.image('podloga', 'assets/podloga.png');
-    this.load.image('balwanek', 'assets/balwanek-tr.png');
-    this.load.image('player', 'assets/player-s.png');
-
-    this.load.audio('hop', 'assets/hop.mp3');
-    this.load.audio('happy', 'assets/happy.mp3');
-    this.load.audio('back', 'assets/back.mp3');
-
+  window.PhaserGame.level2.preload(this);
 }
 
 function create () {
